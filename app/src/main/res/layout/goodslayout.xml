@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="50dp"
+        app:cardElevation="3dp"
+        app:cardMaxElevation="3dp"
+        app:cardCornerRadius="20dp"
+        app:cardUseCompatPadding="true"
+android:outlineSpotShadowColor="@color/primary"
+        android:outlineAmbientShadowColor="@color/primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/goodImg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                tools:srcCompat="@tools:sample/avatars"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/goodTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/goodImg"
+                app:layout_constraintStart_toEndOf="@id/goodImg"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="Test"
+                android:textColor="@color/primary_dark"
+                />
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/goodTitle"
+                app:layout_constraintStart_toEndOf="@id/goodTitle"
+                android:visibility="gone"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Test"
+
+                />
+            <TextView
+                android:id="@+id/goodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/goodTitle"
+                app:layout_constraintTop_toBottomOf="@id/goodTitle"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:text="Test"
+                android:textStyle="bold"
+                android:textColor="@color/primary_dark"
+
+                />
+            <TextView
+                android:id="@+id/addtoCartTtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Add to Cart"
+                android:textColor="@color/primary"
+                app:layout_constraintBottom_toTopOf="@id/subGoodBtn"
+                app:layout_constraintStart_toStartOf="@id/addGoodBtn"
+                app:layout_constraintEnd_toEndOf="@id/subGoodBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <Button
+                android:id="@+id/addGoodBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+                android:background="@drawable/ic_baseline_add_24"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_dark"
+                android:backgroundTintMode="add"
+                app:layout_constraintTop_toTopOf="@id/ammounTtext"
+                app:layout_constraintBottom_toBottomOf="@id/ammounTtext"
+                app:layout_constraintEnd_toStartOf="@id/ammounTtext" />
+            <TextView
+                android:id="@+id/ammounTtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="0"
+                android:textColor="@color/primary_dark"
+
+                app:layout_constraintTop_toTopOf="@id/subGoodBtn"
+                app:layout_constraintBottom_toBottomOf="@id/subGoodBtn"
+                app:layout_constraintEnd_toStartOf="@id/subGoodBtn"
+                />
+
+            <Button
+                android:id="@+id/subGoodBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ic_baseline_remove_24"
+                android:backgroundTint="@color/primary_dark"
+
+                android:backgroundTintMode="add"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addtoCartTtext" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:elevation="3dp"
+        app:cardElevation="3dp"
+        app:cardMaxElevation="3dp"
+        app:cardCornerRadius="20dp"
+        app:cardUseCompatPadding="true"
+        android:outlineSpotShadowColor="@color/primary"
+        android:outlineAmbientShadowColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:id="@+id/nameSalla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="Test"
+                android:textColor="@color/primary_dark"
+                app:layout_constraintStart_toEndOf="@+id/imgSalla"
+                app:layout_constraintTop_toTopOf="@+id/imgSalla" />
+
+            <ImageView
+                android:id="@+id/imgSalla"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/microsoftsurace"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/priceSalla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+
+                android:textColor="@color/primary_dark"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgSalla"
+                app:layout_constraintStart_toStartOf="@+id/nameSalla"
+                app:layout_constraintTop_toBottomOf="@+id/nameSalla" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+
+                android:textStyle="bold"
+
+                android:textColor="@color/primary_dark"
+                android:gravity="end"
+                android:text="count"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/priceSalla"
+                app:layout_constraintEnd_toStartOf="@+id/resultNumber"
+                app:layout_constraintStart_toEndOf="@+id/priceSalla" />
+
+            <TextView
+                android:id="@+id/resultNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+
+
+                android:textStyle="bold"
+
+                android:textColor="@color/primary_dark"
+                android:text="0"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
